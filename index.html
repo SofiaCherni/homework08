@@ -9,10 +9,17 @@
 </head>
 <body>
     <div class="background">
+        <div id="rainbow" class="rainbow">
+            <img src="imags/rainbow.png" alt="rainbow">
+        </div>
         <div class="ground behind"></div>
         <div class="ground behind_2"></div>
         <div class="ground front"></div>
         <div class="ground front_2"></div>
+        <div class="cloud-img">
+            <img src="imags/cloud.png" alt="cloud">
+            <img class="cloud-img cloud-img--special" src="imags/cloud.png" alt="cloud">
+        </div>
         <div class="sun">
             <div class="beam"></div>
             <div class="beam beam1"></div>
@@ -203,14 +210,19 @@
     </div>
 </div>
     <script>
-        var rain = document.getElementById('rain');
-        var flower = document.getElementById('flower');
+        let rain = document.getElementById('rain');
+        let flower = document.getElementById('flower');
+        let rainbow = document.getElementById('rainbow');
         document.addEventListener('click', function(){
             rain.classList.toggle("active");
         })
         document.addEventListener('click', function(){
             flower.classList.toggle("active");
         })
+        document.addEventListener('click', function(){
+            rainbow.classList.toggle("active");
+        })
+
     </script>
 </body>
 </html>

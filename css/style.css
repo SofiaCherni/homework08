@@ -1,16 +1,16 @@
 .background {
     position: relative;
-    width: 800px;
-    height: 500px;
-    margin: 50px auto;
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
     overflow: hidden;
     background: linear-gradient(to top,rgb(42, 138, 182),rgb(2, 105, 173));
 }
 
 .ground {
     position: absolute;
-    right: 150px;
-    width: 770px;
+    right: 250px;
+    width: 90%;
     height: 200px;
     margin-bottom: -80px;
     bottom: 0;
@@ -19,9 +19,21 @@
     box-shadow: 0 0 100px #72e645 inset;
 }
 
-.behind_2 {left: 150px;}
-.front {margin-bottom: -135px;left: -47px; z-index: 2;}
-.front_2 {margin-bottom: -113px;right: -484px;z-index: 2;}
+.behind_2 {
+    left: 300px;
+}
+
+.front {
+    margin-bottom: -135px;
+    left: -47px;
+    z-index: 2;
+}
+
+.front_2 {
+    margin-bottom: -113px;
+    right: -484px;
+    z-index: 2;
+}
 
 .sun {
     position: absolute;
@@ -87,11 +99,11 @@
 }
 
 .cloud {
-    position: relative;
+    position: absolute;
     top: 100px;
     left: 100px;
     width: 150px;
-    height: 230px;
+    height: 500px;
 }
 
 .cloud_right {
@@ -175,9 +187,9 @@
 }
 
 .flower.active {
+    position: absolute;
     display: block;
-    position: relative;
-    top: 120px;
+    top: 510px;
     left: 190px;
     width: 3px;
     height: 40px;
@@ -256,6 +268,56 @@
     }
 }
 
+.cloud-img {
+    position: absolute;
+    left: 300px;
+    width: 30%;
+    animation: cloud 3s forwards;
+}
+
+.cloud-img .cloud-img--special {
+    top: 150px;
+    left: 600px;
+    width: 70%;
+}
+
+@keyframes cloud {
+    0% {
+        transform: translateX(200px);
+    }
+    100% {
+        transform: translateY(50px);
+    }
+}
+
+.rainbow{
+    display: none;
+}
+
+.rainbow.active {
+    display: block;
+    position: absolute;
+    left: 200px;
+    width: 60%;
+    opacity: 0;
+    animation: rainbow 3s forwards;
+}
+
+@keyframes rainbow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.rainbow img,
+.cloud-img img
+{
+    width: 100%;
+}
+
 .trunk,
 .branch {
     border-radius: 25px;
@@ -264,8 +326,8 @@
 
 .trunk {
     position: absolute;
-    top: 150px;
-    left: 330px;
+    top: 265px;
+    left: 450px;
     width: 5px;
     height: 250px;
 }
@@ -399,7 +461,7 @@
     width: 308px;
     height: 250px;
     bottom: 50px;
-    left: 450px;
+    left: 700px;
     background-color: white;
 }
 
@@ -618,13 +680,13 @@
 
 .river {
     position: absolute;
-    top: 480px;
+    top: 570px;
     left: -20px;
-    width: 500px;
+    width: 700px;
     height: 100px;
     background: #ffffff00;
     overflow: hidden;
-    transform: rotate(10deg);
+    transform: rotate(5deg);
     z-index: 2;
 }
 
@@ -640,13 +702,13 @@
 
 .river1 {
     position: absolute;
-    top: 500px;
+    top: 585px;
     left: -20px;
-    width: 500px;
+    width: 700px;
     height: 100px;
     background: #ffffff00;
     overflow: hidden;
-    transform: rotate(10deg);
+    transform: rotate(5deg);
     z-index: 2;
 }
 
